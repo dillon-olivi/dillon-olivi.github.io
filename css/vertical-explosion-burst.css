@@ -1,0 +1,28 @@
+/* ============================================================
+   Vertical explosion click-burst
+   Paste into Squarespace: Design > Custom CSS
+
+   Usage: add class "vertical-explosion-trigger" to any element
+   you want to spawn the burst on click.
+   ============================================================ */
+
+.vertical-explosion-burst {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: 1000px 200px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vertical-explosion-burst {
+    animation: vertical-explosion-fade-only 0.3s ease-out forwards;
+  }
+}
+
+@keyframes vertical-explosion-fade-only {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
