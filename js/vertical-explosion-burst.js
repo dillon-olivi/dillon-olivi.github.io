@@ -60,6 +60,15 @@
         var x = e.clientX - rect.left;
         var y = e.clientY - rect.top;
         burst(x, y, trigger);
+
+        // If this is a link, let the burst play briefly before navigating
+        var href = trigger.getAttribute('href');
+        if (href && href !== '#') {
+          e.preventDefault();
+          setTimeout(function () {
+            window.location.href = href;
+          }, 350);
+        }
       });
     });
   }

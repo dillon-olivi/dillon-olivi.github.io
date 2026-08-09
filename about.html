@@ -1,77 +1,55 @@
-/* ============================================================
-   Purple vortex click-burst
-   Sprite: "Will's Pixel Explosions" (round explosion / vortex),
-   free sample by Will Tice, unTied Games (@untiedgames).
-   Credit Will Tice in your site's credits per the pack license.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Dillon Olivi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/spell-hover.css">
+</head>
+<body>
 
-   Paste into Squarespace: Settings > Advanced > Code Injection
-   > Footer, wrapped in <script> tags.
+<nav class="site-nav">
+  <a class="brand" href="index.html">dillon olivi</a>
+  <div class="links">
+    <a href="software-engineering.html">software engineering</a>
+    <a href="game-design.html">game design</a>
+    <a href="resume.html">resume</a>
+  </div>
+</nav>
 
-   Pairs with vortex-burst.css. Requires assets/round-vortex.png
-   to be uploaded to your site (e.g. in an image block, or via
-   Settings > Advanced > File Storage, then update ASSET_URL
-   below to the hosted path Squarespace gives you).
-   ============================================================ */
+<section class="page-content">
+  <div class="eyebrow">about</div>
+  <h1>How ar'ya!</h1>
+  <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8;">
+    I'm Dillon — DJ to most people. I'm based in Irvine, CA, and I split my time
+    between two things I care about equally: building solid, well-tested software,
+    and designing the kind of game systems that make people lose track of time.
+  </p>
+  <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8;">
+    World of Warcraft has been with me since I was a kid, and it's honestly the
+    single biggest influence on how I think about design — I play both Classic and
+    Retail, chase high-end content, and still slow down for a good quest text or
+    a gathering profession when the mood strikes. I'm an active Old School RuneScape
+    player too, so if you catch me clicking a rock repeatedly for no good reason,
+    that's why.
+  </p>
+  <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8;">
+    I hold a B.S. in Game Design from Full Sail University, and I spent time at
+    Blizzard Entertainment as a Senior QA Analyst and Design Mentee on Diablo IV
+    and World of Warcraft — QA automation, LUA scripting, and quest, item, and
+    spell design. These days I'm building out personal projects across both
+    software engineering and game design, which is exactly what this site is for.
+  </p>
+  <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8;">
+    Keep yer feet on the ground.
+  </p>
+</section>
 
-(function () {
-  var ASSET_URL = 'round-vortex.png';
-  var FRAMES = [[0, 0, 100, 100], [100, 0, 100, 100], [200, 0, 100, 100], [300, 0, 100, 100], [400, 0, 100, 100], [500, 0, 100, 100], [600, 0, 100, 100], [700, 0, 100, 100], [800, 0, 100, 100], [900, 0, 100, 100], [0, 100, 100, 100], [100, 100, 100, 100], [200, 100, 100, 100], [300, 100, 100, 100], [400, 100, 100, 100], [500, 100, 100, 100], [600, 100, 100, 100], [700, 100, 100, 100], [800, 100, 100, 100], [900, 100, 100, 100], [0, 200, 100, 100], [100, 200, 100, 100], [200, 200, 100, 100], [300, 200, 100, 100], [400, 200, 100, 100], [500, 200, 100, 100], [600, 200, 100, 100], [700, 200, 100, 100], [800, 200, 100, 100], [900, 200, 100, 100], [0, 300, 100, 100], [100, 300, 100, 100], [200, 300, 100, 100], [300, 300, 100, 100], [400, 300, 100, 100], [500, 300, 100, 100], [600, 300, 100, 100], [700, 300, 100, 100], [800, 300, 100, 100], [900, 300, 100, 100], [0, 400, 100, 100], [100, 400, 100, 100], [200, 400, 100, 100], [300, 400, 100, 100], [400, 400, 100, 100], [500, 400, 100, 100], [600, 400, 100, 100], [700, 400, 100, 100], [800, 400, 100, 100], [900, 400, 100, 100], [0, 500, 100, 100], [100, 500, 100, 100], [200, 500, 100, 100], [300, 500, 100, 100], [400, 500, 100, 100], [500, 500, 100, 100], [600, 500, 100, 100], [700, 500, 100, 100], [800, 500, 100, 100], [900, 500, 100, 100], [0, 600, 100, 100], [100, 600, 100, 100], [200, 600, 100, 100], [300, 600, 100, 100], [400, 600, 100, 100], [500, 600, 100, 100], [600, 600, 100, 100], [700, 600, 100, 100], [800, 600, 100, 100], [900, 600, 100, 100], [0, 700, 100, 100]];
-  var FPS = 60;
-  var FRAME_MS = 1000 / FPS;
+<footer class="site-footer"></footer>
 
-  function burst(x, y, container) {
-    var el = document.createElement('div');
-    el.className = 'vortex-burst';
-    el.style.left = (x - 50) + 'px';
-    el.style.top = (y - 50) + 'px';
-    el.style.backgroundImage = 'url(' + ASSET_URL + ')';
-    container.appendChild(el);
-
-    var reduceMotion = window.matchMedia &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduceMotion) {
-      var mid = FRAMES[Math.floor(FRAMES.length / 3)];
-      el.style.backgroundPosition = (-mid[0]) + 'px ' + (-mid[1]) + 'px';
-      setTimeout(function () { el.remove(); }, 300);
-      return;
-    }
-
-    var i = 0;
-    var timer = setInterval(function () {
-      if (i >= FRAMES.length) {
-        clearInterval(timer);
-        el.remove();
-        return;
-      }
-      var f = FRAMES[i];
-      el.style.backgroundPosition = (-f[0]) + 'px ' + (-f[1]) + 'px';
-      i++;
-    }, FRAME_MS);
-  }
-
-  function init() {
-    document.querySelectorAll('.vortex-trigger').forEach(function (trigger) {
-      if (trigger.dataset.vortexReady) return;
-      trigger.dataset.vortexReady = 'true';
-      trigger.style.position = trigger.style.position || 'relative';
-      trigger.addEventListener('click', function (e) {
-        var rect = trigger.getBoundingClientRect();
-        var x = e.clientX - rect.left;
-        var y = e.clientY - rect.top;
-        burst(x, y, trigger);
-
-        // If this is a link, let the burst play briefly before navigating
-        var href = trigger.getAttribute('href');
-        if (href && href !== '#') {
-          e.preventDefault();
-          setTimeout(function () {
-            window.location.href = href;
-          }, 350);
-        }
-      });
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', init);
-  window.addEventListener('load', init);
-})();
+<script src="js/spell-hover.js"></script>
+</body>
+</html>

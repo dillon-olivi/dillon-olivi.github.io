@@ -1,78 +1,56 @@
-/* ============================================================
-   Vertical explosion (small) click-burst — green/yellow
-   Sprite: free sample animation, individual frames stitched
-   into one atlas (20 frames, 100x100, 60fps).
-   Credit the original asset pack per its license, same as the
-   other burst effects.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game design — Dillon Olivi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/spell-hover.css">
+<link rel="stylesheet" href="css/vortex-burst.css">
+</head>
+<body class="page-design">
 
-   Paste into Squarespace: Settings > Advanced > Code Injection
-   > Footer, wrapped in <script> tags. On GitHub Pages, include
-   as a regular <script> tag before </body>.
+<nav class="site-nav">
+  <a class="brand" href="index.html">dillon olivi</a>
+  <div class="links">
+    <a href="software-engineering.html">software engineering</a>
+    <a href="about.html">about</a>
+    <a href="resume.html">resume</a>
+  </div>
+</nav>
 
-   Pairs with vertical-explosion-small-burst.css. Requires
-   assets/vertical-explosion-small.png to be hosted alongside
-   your site (update ASSET_URL below to match where you place it).
-   ============================================================ */
+<section class="page-content">
+  <div class="eyebrow">game design</div>
+  <h1>Quest, item, and spell design</h1>
+  <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2.5rem;">
+    Systems and content design work, from a personal Unreal Engine project to
+    production quest and item design at Blizzard.
+  </p>
 
-(function () {
-  var ASSET_URL = 'vertical-explosion-small.png';
-  var FRAMES = [[0, 0, 100, 100], [100, 0, 100, 100], [200, 0, 100, 100], [300, 0, 100, 100], [400, 0, 100, 100], [500, 0, 100, 100], [600, 0, 100, 100], [700, 0, 100, 100], [800, 0, 100, 100], [900, 0, 100, 100], [0, 100, 100, 100], [100, 100, 100, 100], [200, 100, 100, 100], [300, 100, 100, 100], [400, 100, 100, 100], [500, 100, 100, 100], [600, 100, 100, 100], [700, 100, 100, 100], [800, 100, 100, 100], [900, 100, 100, 100]];
-  var FPS = 60;
-  var FRAME_MS = 1000 / FPS;
+  <div class="project-card proc-btn vortex-trigger">
+    <h3>Sparklight</h3>
+    <p>A personal action-roguelite built in Unreal Engine (4.12–5.2) with Blueprints, supporting both character and tower progression. Four archetype-based class kits — Knight, Ranger, Mage, Rogue — each with unique resource economies and ability synergies, plus a tower system built on shared inheritance for attack logic, targeting, and upgrades.</p>
+    <div class="skill-tags">
+      <span>Unreal Engine</span><span>Blueprints</span><span>Systems design</span><span>Progression design</span>
+    </div>
+  </div>
 
-  function burst(x, y, container) {
-    var el = document.createElement('div');
-    el.className = 'vertical-explosion-small-burst';
-    el.style.left = (x - 50) + 'px';
-    el.style.top = (y - 50) + 'px';
-    el.style.backgroundImage = 'url(' + ASSET_URL + ')';
-    container.appendChild(el);
+  <div class="project-card proc-btn vortex-trigger">
+    <h3>Blizzard design work</h3>
+    <p>Design Mentee and Senior QA Analyst on Diablo IV and World of Warcraft — quest, item, and spell design in WoWEdit, working closely with systems and content teams on live production content.</p>
+    <div class="skill-tags">
+      <span>WoWEdit</span><span>Quest design</span><span>Item design</span><span>Spell design</span>
+    </div>
+  </div>
+</section>
 
-    var reduceMotion = window.matchMedia &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduceMotion) {
-      var mid = FRAMES[Math.floor(FRAMES.length / 3)];
-      el.style.backgroundPosition = (-mid[0]) + 'px ' + (-mid[1]) + 'px';
-      setTimeout(function () { el.remove(); }, 300);
-      return;
-    }
+<footer class="site-footer">
+  <p class="credit">Burst effects use assets from <a href="https://untiedgames.itch.io" target="_blank" rel="noopener">unTied Games</a>.</p>
+</footer>
 
-    var i = 0;
-    var timer = setInterval(function () {
-      if (i >= FRAMES.length) {
-        clearInterval(timer);
-        el.remove();
-        return;
-      }
-      var f = FRAMES[i];
-      el.style.backgroundPosition = (-f[0]) + 'px ' + (-f[1]) + 'px';
-      i++;
-    }, FRAME_MS);
-  }
-
-  function init() {
-    document.querySelectorAll('.vertical-explosion-small-trigger').forEach(function (trigger) {
-      if (trigger.dataset.vertExplosionSmallReady) return;
-      trigger.dataset.vertExplosionSmallReady = 'true';
-      trigger.style.position = trigger.style.position || 'relative';
-      trigger.addEventListener('click', function (e) {
-        var rect = trigger.getBoundingClientRect();
-        var x = e.clientX - rect.left;
-        var y = e.clientY - rect.top;
-        burst(x, y, trigger);
-
-        // If this is a link, let the burst play briefly before navigating
-        var href = trigger.getAttribute('href');
-        if (href && href !== '#') {
-          e.preventDefault();
-          setTimeout(function () {
-            window.location.href = href;
-          }, 350);
-        }
-      });
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', init);
-  window.addEventListener('load', init);
-})();
+<script src="js/spell-hover.js"></script>
+<script src="js/vortex-burst.js"></script>
+</body>
+</html>
