@@ -1,28 +1,28 @@
 /* ============================================================
-   Vertical explosion click-burst (icy/frost blue)
-   Sprite: free sample animation, individual frames stitched
-   into one atlas (20 frames, 100x100, 60fps).
+   Explosion click-burst
+   Sprite: free sample explosion animation, individual frames
+   stitched into one atlas (39 frames, 100x100, 60fps).
    Credit the original asset pack per its license, same as the
-   other burst effects.
+   vortex effect's credit line.
 
    Paste into Squarespace: Settings > Advanced > Code Injection
    > Footer, wrapped in <script> tags. On GitHub Pages, include
    as a regular <script> tag before </body>.
 
-   Pairs with vertical-explosion-burst.css. Requires
-   assets/vertical-explosion.png to be hosted alongside your
-   site (update ASSET_URL below to match where you place it).
+   Pairs with explosion-burst.css. Requires
+   assets/round-explosion.png to be hosted alongside your site
+   (update ASSET_URL below to match where you place it).
    ============================================================ */
 
 (function () {
-  var ASSET_URL = 'vertical-explosion.png';
-  var FRAMES = [[0, 0, 100, 100], [100, 0, 100, 100], [200, 0, 100, 100], [300, 0, 100, 100], [400, 0, 100, 100], [500, 0, 100, 100], [600, 0, 100, 100], [700, 0, 100, 100], [800, 0, 100, 100], [900, 0, 100, 100], [0, 100, 100, 100], [100, 100, 100, 100], [200, 100, 100, 100], [300, 100, 100, 100], [400, 100, 100, 100], [500, 100, 100, 100], [600, 100, 100, 100], [700, 100, 100, 100], [800, 100, 100, 100], [900, 100, 100, 100]];
+  var ASSET_URL = 'round-explosion.png';
+  var FRAMES = [[0, 0, 100, 100], [100, 0, 100, 100], [200, 0, 100, 100], [300, 0, 100, 100], [400, 0, 100, 100], [500, 0, 100, 100], [600, 0, 100, 100], [700, 0, 100, 100], [800, 0, 100, 100], [900, 0, 100, 100], [0, 100, 100, 100], [100, 100, 100, 100], [200, 100, 100, 100], [300, 100, 100, 100], [400, 100, 100, 100], [500, 100, 100, 100], [600, 100, 100, 100], [700, 100, 100, 100], [800, 100, 100, 100], [900, 100, 100, 100], [0, 200, 100, 100], [100, 200, 100, 100], [200, 200, 100, 100], [300, 200, 100, 100], [400, 200, 100, 100], [500, 200, 100, 100], [600, 200, 100, 100], [700, 200, 100, 100], [800, 200, 100, 100], [900, 200, 100, 100], [0, 300, 100, 100], [100, 300, 100, 100], [200, 300, 100, 100], [300, 300, 100, 100], [400, 300, 100, 100], [500, 300, 100, 100], [600, 300, 100, 100], [700, 300, 100, 100], [800, 300, 100, 100]];
   var FPS = 60;
   var FRAME_MS = 1000 / FPS;
 
   function burst(x, y, container) {
     var el = document.createElement('div');
-    el.className = 'vertical-explosion-burst';
+    el.className = 'explosion-burst';
     el.style.left = (x - 50) + 'px';
     el.style.top = (y - 50) + 'px';
     el.style.backgroundImage = 'url(' + ASSET_URL + ')';
@@ -51,9 +51,9 @@
   }
 
   function init() {
-    document.querySelectorAll('.vertical-explosion-trigger').forEach(function (trigger) {
-      if (trigger.dataset.vertExplosionReady) return;
-      trigger.dataset.vertExplosionReady = 'true';
+    document.querySelectorAll('.explosion-trigger').forEach(function (trigger) {
+      if (trigger.dataset.explosionReady) return;
+      trigger.dataset.explosionReady = 'true';
       trigger.style.position = trigger.style.position || 'relative';
       trigger.addEventListener('click', function (e) {
         var rect = trigger.getBoundingClientRect();
