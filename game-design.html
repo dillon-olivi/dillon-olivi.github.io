@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/spell-hover.css">
 <link rel="stylesheet" href="css/vortex-burst.css">
+<link rel="stylesheet" href="css/media-carousel.css">
 </head>
 <body class="page-design">
 
@@ -40,9 +41,15 @@
   </div>
 
   <div class="project-card proc-btn vortex-trigger">
-    <div class="project-media">
-      <video autoplay muted loop playsinline><source src="assets/projects/sunken-temple.mp4" type="video/mp4"></video>
+  <div class="carousel" data-carousel>
+    <div class="carousel-track">
+      <video autoplay muted loop playsinline><source src="sunken-temple.mp4" type="video/mp4"></video>
+      <video muted loop playsinline><source src="sunken-temple-2.mp4" type="video/mp4"></video>
     </div>
+    <button class="carousel-btn prev" aria-label="Previous">‹</button>
+    <button class="carousel-btn next" aria-label="Next">›</button>
+    <div class="carousel-dots"></div>
+  </div>
     <div class="project-gallery">
       <img src="assets/projects/sunken-temple-1.webp" alt="Sunken Temple waterfall cave">
       <img src="assets/projects/sunken-temple-3.webp" alt="Sunken Temple entrance">
@@ -100,5 +107,6 @@
 
 <script src="js/spell-hover.js"></script>
 <script src="js/vortex-burst.js"></script>
+<script src="js/media-carousel.js"></script>
 </body>
 </html>
