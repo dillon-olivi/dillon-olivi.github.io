@@ -233,6 +233,10 @@ a { color: inherit; text-decoration: none; }
 }
 
 .project-card h3 { font-size: 1.25rem; margin: 0 0 0.5rem; }
+.quest-case-study h2 { font-size: 1.25rem; margin: 0 0 0.5rem; }
+.quest-case-study .project-media img { height: auto; }
+.quest-case-study .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.quest-case-study .case-study-disclaimer { margin-bottom: 0; }
 .project-card p { color: var(--text-muted); margin: 0 0 0.75rem; font-size: 0.95rem; }
 
 .project-media {
