@@ -25,6 +25,7 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     track.style.transform = `translateX(-${index * 100}%)`;
     dots.forEach((d, di) => d.classList.toggle('active', di === index));
     updateAccessibility();
+    carousel.dispatchEvent(new Event('carouselchange', {bubbles: true}));
   }
 
   function updateAccessibility() {

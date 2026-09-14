@@ -132,4 +132,18 @@ small { font-size: .8rem; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
-
+html { scroll-behavior: smooth; }
+#skills, #technical-design { scroll-margin-top: 2rem; }
+.credits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 1.5rem; }
+.team-section { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+.credit-card { padding: 0; overflow: hidden; margin: 0; }
+.credit-card > img { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; }
+.credit-card h4 { font-size: 1.1rem; margin: 0 0 .5rem; }
+.credit-card p { margin: 0; }
+.assignment-feature { display: grid; grid-template-columns: 1fr 1.25fr; gap: 2rem; align-items: start; }
+.assignment-feature > img { width: 100%; height: auto; border-radius: 10px; }
+.assignment-feature h4 { margin: 1.25rem 0 .4rem; font-size: .95rem; }
+.assignment-feature p { color: var(--text-muted); }
+.skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 760px) { .assignment-feature, .skills-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
