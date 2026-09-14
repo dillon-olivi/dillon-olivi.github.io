@@ -24,13 +24,18 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     index = (i + slides.length) % slides.length;
     track.style.transform = `translateX(-${index * 100}%)`;
     dots.forEach((d, di) => d.classList.toggle('active', di === index));
-
-    const incoming = slides[index];
-    if (incoming.tagName === 'VIDEO') {
-      incoming.currentTime = 0;
-      incoming.play();
-    }
+    updateAccessibility();
   }
+
+  function updateAccessibility() {
+    slides.forEach((slide, i) => {
+      slide.inert = i !== index;
+      slide.setAttribute('aria-hidden', String(i !== index));
+      slide.setAttribute('aria-label', 'Sunken Temple video ' + (i + 1));
+      dots[i].setAttribute('aria-pressed', String(i === index));
+    });
+  }
+  updateAccessibility();
 
   prevBtn.addEventListener('click', () => goTo(index - 1));
   nextBtn.addEventListener('click', () => goTo(index + 1));

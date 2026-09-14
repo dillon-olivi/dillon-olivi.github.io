@@ -4,74 +4,46 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
-<title>Software Engineer — Dillon Olivi</title>
+<title>Engineering Projects — Dillon Olivi</title>
+<meta name="description" content="Backend API integration, automated testing, CI/CD, and developer tooling projects by Dillon Olivi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Cormorant+Garamond:wght@500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/spell-hover.css">
-<link rel="stylesheet" href="css/explosion-burst.css">
 </head>
 <body class="page-swe">
-<nav class="site-nav">
-<a class="brand" href="index.html">Dillon Olivi</a>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+<a class="brand" href="index.html">Dillon Olivi<span class="brand-dot" aria-hidden="true">.</span></a>
 <div class="links">
-<a href="game-design.html">Game Design</a>
-<a href="about.html">About</a>
+<a href="software-engineering.html" aria-current="page">Projects</a>
 <a href="experience.html">Experience</a>
+<a href="software-engineering.html#skills">Skills</a>
+<a href="game-design.html">Design</a>
+<a href="about.html">About</a>
 </div>
 </nav>
-<section class="page-content">
-<div class="eyebrow">Software Engineering</div>
-<h1>Demos and skillset</h1>
-<p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2.5rem;">
-Built on years of QA automation and systems work at Blizzard, these are personal
-projects that carry that same rigor into full-stack development.
-</p>
+<main id="main" class="page-content" tabindex="-1">
 
-<h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Demos</h2>
+<header class="page-header"><p class="eyebrow">Software Engineering</p><h1>Projects built around reliability.</h1><p class="lead">Backend integrations and automated testing, informed by hands-on experience with build validation and live-service releases.</p></header>
+<section aria-labelledby="engineering-projects"><div class="section-heading"><h2 id="engineering-projects">Engineering projects</h2><span class="muted">Personal projects · Live demos</span></div><div class="project-grid"><article class="project-card engineering-card" id="test-automation">
+<a class="project-media" href="https://dillon-olivi.github.io/release-readiness-demo/" target="_blank" rel="noopener noreferrer"><img src="assets/projects/test-automation-preview.png" alt="Test automation suite interface preview" loading="lazy"></a>
+<div class="project-body"><p class="eyebrow">Automation / CI/CD</p><h3>Test automation suite</h3><p>A QA automation portfolio project combining Selenium browser tests, HTTP-level checks with requests, and pytest in a GitHub Actions workflow.</p><div class="skill-tags"><span>Python</span><span>Pytest</span><span>Selenium</span><span>GitHub Actions</span></div>
+<a class="text-link" href="https://dillon-olivi.github.io/release-readiness-demo/" target="_blank" rel="noopener noreferrer">Explore test automation suite <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="project-card engineering-card" id="steam-dashboard">
+<a class="project-media" href="https://dillon-olivi.github.io/steam-dashboard/" target="_blank" rel="noopener noreferrer"><img src="assets/projects/steam-dashboard-preview.png" alt="Steam stats dashboard with player lookup and demo profile controls" loading="lazy"></a>
+<div class="project-body"><p class="eyebrow">Backend / API integration</p><h3>Steam stats dashboard</h3><p>A full-stack dashboard integrating the Steam Web API with a FastAPI backend on Render and a static frontend on GitHub Pages.</p><div class="skill-tags"><span>Python</span><span>FastAPI</span><span>REST APIs</span><span>Render</span></div>
+<a class="text-link" href="https://dillon-olivi.github.io/steam-dashboard/" target="_blank" rel="noopener noreferrer">Explore steam stats dashboard <span aria-hidden="true">↗</span></a></div>
+</article></div></section>
+<section class="section" id="skills" aria-labelledby="skills-title"><p class="eyebrow">Technical toolkit</p><h2 id="skills-title">Skills &amp; technologies</h2><div class="skills-grid">
+<div><h3>Languages</h3><div class="skill-tags"><span>Python</span><span>JavaScript</span><span>SQL</span><span>C#</span><span>Lua</span></div></div>
+<div><h3>Backend &amp; APIs</h3><div class="skill-tags"><span>FastAPI</span><span>REST APIs</span><span>Steam Web API</span><span>Render</span></div></div>
+<div><h3>Testing &amp; delivery</h3><div class="skill-tags"><span>Pytest</span><span>Selenium</span><span>Requests</span><span>Git</span><span>GitHub Actions</span><span>Jenkins</span><span>CI/CD</span></div></div>
+</div></section>
+<section class="section background-strip"><div><p class="eyebrow">In production</p><h2>Software QA engineering &amp; automation</h2></div><div><p>See how I applied automation, debugging, and release quality gates at Blizzard Entertainment.</p><a class="text-link" href="experience.html">View professional experience ↗</a></div></section>
 
-<div class="project-card proc-btn explosion-trigger">
-<a href="https://dillon-olivi.github.io/steam-dashboard/" target="_blank" rel="noopener">
-<img src="assets/projects/steam-dashboard-preview.png" alt="Steam stats dashboard preview" style="width: 100%; border-radius: 8px; display: block; margin-bottom: 1rem; cursor: pointer;">
-</a>
-<div style="border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
-<h3 style="margin-top: 0;">Steam stats dashboard</h3>
-<p>A full-stack dashboard pulling live player data through the Steam Web API — FastAPI backend deployed on Render, static frontend on GitHub Pages, end to end and live.</p>
-<div class="skill-tags">
-<span>FastAPI</span><span>Python</span><span>Render</span><span>Steam Web API</span><span>GitHub Pages</span>
-</div>
-</div>
-<p style="margin-top: 1rem; margin-bottom: 0;"><a class="btn proc-btn" href="https://dillon-olivi.github.io/steam-dashboard/" target="_blank" rel="noopener">View live demo ↗</a></p>
-</div>
-
-<div class="project-card proc-btn explosion-trigger">
-<a href="https://dillon-olivi.github.io/release-readiness-demo/" target="_blank" rel="noopener">
-<img src="assets/projects/test-automation-preview.png" alt="Test automation suite preview" style="width: 100%; border-radius: 8px; display: block; margin-bottom: 1rem; cursor: pointer;">
-</a>
-<div style="border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
-<h3 style="margin-top: 0;">Test automation suite</h3>
-<p>A QA automation portfolio built around real-world SDET practices: automated test scripting with Selenium and pytest, HTTP-level checks with requests, and continuous integration through GitHub Actions.</p>
-<div class="skill-tags">
-<span>Pytest</span><span>Selenium</span><span>Requests</span><span>GitHub Actions</span><span>CI/CD</span>
-</div>
-</div>
-<p style="margin-top: 1rem; margin-bottom: 0;"><a class="btn proc-btn" href="https://dillon-olivi.github.io/release-readiness-demo/" target="_blank" rel="noopener">View live demo ↗</a></p>
-</div>
-
-<h2 style="font-size: 1.3rem; margin: 2.5rem 0 1rem;">Skillset</h2>
-
-<div class="project-card" style="height: auto; min-height: 0; overflow: visible; padding-bottom: 1.5rem;">
-<div class="skill-tags" style="flex-wrap: wrap; height: auto; overflow: visible;">
-<span style="white-space: nowrap;">Python</span><span style="white-space: nowrap;">C#</span><span style="white-space: nowrap;">LUA</span><span style="white-space: nowrap;">SQL</span><span style="white-space: nowrap;">Git</span>
-<span style="white-space: nowrap;">Jenkins / CI-CD</span><span style="white-space: nowrap;">Unreal Engine Blueprints</span><span style="white-space: nowrap;">Automated test scripting</span>
-</div>
-</div>
-
-</section>
-<footer class="site-footer">
-<p class="credit">Burst effects use assets from <a href="https://untiedgames.itch.io" target="_blank" rel="noopener">unTied Games</a>.</p>
-</footer>
-<script src="js/spell-hover.js"></script>
-<script src="js/explosion-burst.js"></script>
+</main>
+<footer class="site-footer"><p>Dillon Olivi · Software Engineering &amp; Automation</p><a href="mailto:dillonjameso13@gmail.com">Get in touch ↗</a></footer>
 </body>
 </html>

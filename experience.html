@@ -5,144 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
 <title>Experience — Dillon Olivi</title>
+<meta name="description" content="Dillon Olivi’s Blizzard Entertainment experience, October 2022–July 2026, in software QA engineering, automation, and technical design.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Cormorant+Garamond:wght@500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/spell-hover.css">
 </head>
-<body>
-<nav class="site-nav">
-<a class="brand" href="index.html">Dillon Olivi</a>
+<body class="page-swe">
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+<a class="brand" href="index.html">Dillon Olivi<span class="brand-dot" aria-hidden="true">.</span></a>
 <div class="links">
-<a href="software-engineering.html">Software Engineering</a>
-<a href="game-design.html">Game Design</a>
+<a href="software-engineering.html">Projects</a>
+<a href="experience.html" aria-current="page">Experience</a>
+<a href="software-engineering.html#skills">Skills</a>
+<a href="game-design.html">Design</a>
 <a href="about.html">About</a>
 </div>
 </nav>
-<section class="page-content">
-<div class="eyebrow">Experience</div>
-<h1>Projects I've worked on</h1>
-<p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 1.5rem;">
-A running list of Software Engineering, Game Design, and Quality Assurance projects I've been a part of.
-</p>
+<main id="main" class="page-content" tabindex="-1">
 
-<h2 style="font-size: 1.4rem; margin: 0 0 1rem;">Blizzard Entertainment</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.25rem; margin-bottom: 2.5rem;">
+<header class="page-header"><p class="eyebrow">Experience</p><h1>Engineering quality into every release.</h1><p class="lead">Automation, debugging, and cross-functional delivery across large-scale live-service development.</p></header>
+<article class="experience-entry" aria-labelledby="blizzard-title">
+<header class="experience-header"><p class="eyebrow">October 2022 – July 2026 · Irvine, CA</p><h2 id="blizzard-title">Blizzard Entertainment</h2><p class="role-title">Senior Quality Analyst / Senior Test Analyst | Software QA Engineering &amp; Automation</p></header>
+<section class="experience-area"><h3>World of Warcraft — QA Automation, Release &amp; Quest Design</h3><ul>
+<li>Owned and developed automated build-validation and deployment infrastructure for a large-scale live-service codebase, providing engineering and production with reliable release-readiness signals on nightly builds.</li>
+<li>Developed automation, debugging workflows, and release quality gates that surfaced integration failures and production-risk issues earlier in development.</li>
+<li>Developed and presented a quest-design framework analyzing how curiosity, exploration, pacing, worldbuilding, empathy, and shared player experiences contribute to memorable World of Warcraft experiences.</li>
+<li>Created reusable quest-design methodologies for translating those principles into new content concepts.</li>
+</ul></section>
+<section class="experience-area"><h3>Diablo IV — Software QA &amp; Automation</h3><ul>
+<li>Developed automation tooling for nightly builds and live/seasonal releases using Git and SQL-backed data validation.</li>
+<li>Reviewed pull requests and automation coverage while mentoring QA and global vendor teams on maintainable tooling, debugging, and engineering practices.</li>
+<li>Partnered with engineering, design, and production teams to diagnose release risk and translate failures into actionable technical findings.</li>
+</ul></section>
+<section class="experience-area" id="technical-design"><h3>Concurrent Technical Design Assignment — Diablo IV</h3>
+<!-- Technical design assignment dates: update this single date line when confirmed. -->
+<p class="assignment-dates"><time datetime="2025-02">February 2025</time> – <time datetime="2025-12">December 2025</time></p>
+<ul><li>Designed, scripted, validated, and shipped 100+ legendary affixes and 10+ player abilities using Lua and proprietary tooling.</li>
+<li>Debugged design and tooling constraints while collaborating across engineering, design, art, production, and QA.</li></ul></section>
+</article>
+<section class="section education" aria-labelledby="education-title"><p class="eyebrow">Education</p><h2 id="education-title">B.S. in Game Design</h2><p>Full Sail University</p><p class="muted">Graduated September 2022</p></section>
+<div class="actions"><a class="btn btn-primary" href="software-engineering.html">Explore engineering projects ↗</a><a class="btn" href="game-design.html">Explore design work</a></div>
 
-<div class="project-card" style="padding: 1rem;">
-<img src="assets/projects/diablo-iv-cover.webp" alt="Diablo IV" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin-bottom: 0.75rem; display: block;">
-<h3 style="margin: 0 0 0.15rem; font-size: 1rem;">Diablo IV</h3>
-<p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Senior Software QA Engineer</p>
-</div>
-
-<div class="project-card" style="padding: 1rem;">
-<img src="assets/projects/diablo-iv-vessel-of-hatred-cover.webp" alt="Diablo IV: Vessel of Hatred" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin-bottom: 0.75rem; display: block;">
-<h3 style="margin: 0 0 0.15rem; font-size: 1rem;">Diablo IV: Vessel of Hatred</h3>
-<p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Senior Software QA Engineer</p>
-</div>
-
-<div class="project-card" style="padding: 1rem;">
-<img src="assets/projects/diablo-iv-lord-of-hatred-cover.webp" alt="Diablo IV: Lord of Hatred" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin-bottom: 0.75rem; display: block;">
-<h3 style="margin: 0 0 0.15rem; font-size: 1rem;">Diablo IV: Lord of Hatred</h3>
-<p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Senior Software QA Engineer</p>
-</div>
-
-<div class="project-card" style="padding: 1rem;">
-<img src="assets/projects/diablo-iv-class-designer-cover.webp" alt="Diablo IV Class Design" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin-bottom: 0.75rem; display: block;">
-<h3 style="margin: 0 0 0.15rem; font-size: 1rem;">Diablo IV</h3>
-<p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Assistant Technical Designer</p>
-</div>
-
-<div class="project-card" style="padding: 1rem;">
-<img src="assets/projects/wow-classic-cover.webp" alt="World of Warcraft Classic" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin-bottom: 0.75rem; display: block;">
-<h3 style="margin: 0 0 0.15rem; font-size: 1rem;">WoW Classic</h3>
-<p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Senior Software QA Engineer</p>
-</div>
-
-<div class="project-card" style="padding: 1rem;">
-<img src="assets/projects/wow-midnight-cover.webp" alt="World of Warcraft: Midnight" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin-bottom: 0.75rem; display: block;">
-<h3 style="margin: 0 0 0.15rem; font-size: 1rem;">WoW: Midnight</h3>
-<p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Senior Software QA Engineer</p>
-</div>
-
-</div>
-
-<h2 style="font-size: 1.4rem; margin: 0 0 1rem;">Independent &amp; Software Projects</h2>
-
-<a href="game-design.html" style="text-decoration: none; color: inherit; display: block;">
-<div class="project-card">
-<h3>Sparklight</h3>
-<p>Personal action-roguelite project in Unreal Engine, ongoing since November 2024 with four class archetypes, shared-inheritance tower system, character and tower defense progression.</p>
-<div class="skill-tags"><span>Unreal Engine</span><span>Blueprints</span><span>Personal project</span></div>
-</div>
-</a>
-
-<a href="software-engineering.html" style="text-decoration: none; color: inherit; display: block;">
-<div class="project-card">
-<h3>Steam stats dashboard</h3>
-<p>Full-stack personal project with FastAPI backend on Render, GitHub Pages frontend, live Steam Web API integration.</p>
-<div class="skill-tags"><span>FastAPI</span><span>Python</span><span>Personal project</span></div>
-</div>
-</a>
-
-<a href="software-engineering.html" style="text-decoration: none; color: inherit; display: block;">
-<div class="project-card">
-<h3>Test automation suite</h3>
-<p>QA automation portfolio project with pytest, Selenium, requests, and GitHub Actions CI.</p>
-<div class="skill-tags"><span>Pytest</span><span>Selenium</span><span>CI/CD</span></div>
-</div>
-</a>
-
-<h2 style="font-size: 1.4rem; margin: 2.5rem 0 1rem;">Game Design Projects</h2>
-
-<a href="game-design.html" style="text-decoration: none; color: inherit; display: block;">
-<div class="project-card">
-<h3>Sunken Temple</h3>
-<p>Solo adventure project with tomb-raider style exploration and puzzle navigation through waterfall caves and a ruined temple.</p>
-<div class="skill-tags"><span>Unreal Engine</span><span>Personal project</span></div>
-</div>
-</a>
-
-<a href="game-design.html" style="text-decoration: none; color: inherit; display: block;">
-<div class="project-card">
-<h3>Tiderunner</h3>
-<p>Cozy platforming puzzle game with floating geometric platforms over a sunset beach.</p>
-<div class="skill-tags"><span>Unreal Engine</span><span>Personal project</span></div>
-</div>
-</a>
-
-<a href="game-design.html" style="text-decoration: none; color: inherit; display: block;">
-<div class="project-card">
-<h3>Neon Ascent</h3>
-<p>Neon-lit puzzle-platformer built around precise mechanics and hazard navigation.</p>
-<div class="skill-tags"><span>Unreal Engine</span><span>Personal project</span></div>
-</div>
-</a>
-
-<a href="game-design.html" style="text-decoration: none; color: inherit; display: block;">
-<div class="project-card">
-<h3>Spellbound</h3>
-<p>Open-world mage RPG built to learn systems design with talent trees, merchant economies, combat, stamina, and health.</p>
-<div class="skill-tags"><span>Unreal Engine</span><span>Personal project</span><span>Systems design</span></div>
-</div>
-</a>
-
-<a href="game-design.html" style="text-decoration: none; color: inherit; display: block;">
-<div class="project-card">
-<h3>Nanite Protocol</h3>
-<p>First-person shooter class project (2022) with health/nanite pickup systems and core FPS mechanics.</p>
-<div class="skill-tags"><span>Unreal Engine</span><span>Class project</span><span>2022</span></div>
-</div>
-</a>
-
-<div class="project-card">
-<h3>Full Sail University</h3>
-<p>Bachelor of Science in Game Design, completed September 2022. Coursework focused on gameplay systems, level design, scripting, rapid prototyping, player experience, and iterative game development using Unreal Engine.</p>
-<div class="skill-tags"><span>B.S. Game Design</span><span>Unreal Engine</span><span>September 2022</span></div>
-</div>
-
-</section>
-<footer class="site-footer"></footer>
-<script src="js/spell-hover.js"></script>
+</main>
+<footer class="site-footer"><p>Dillon Olivi · Software Engineering &amp; Automation</p><a href="mailto:dillonjameso13@gmail.com">Get in touch ↗</a></footer>
 </body>
 </html>

@@ -20,8 +20,8 @@
   background: rgba(0, 0, 0, 0.55);
   color: #fff;
   border: none;
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   cursor: pointer;
   font-size: 1.1rem;
@@ -44,8 +44,8 @@
   z-index: 2;
 }
 .carousel-dot {
-  width: 7px;
-  height: 7px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.4);
   border: none;

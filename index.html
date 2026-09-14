@@ -4,56 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
-<title>Dillon Olivi | Software Engineer, Game Designer, QA</title>
-<meta name="description" content="Portfolio of Dillon Olivi: software engineering projects, game design work, and QA experience from Blizzard's Diablo IV and World of Warcraft teams.">
+<title>Dillon Olivi | Software Engineer & Automation</title>
+<meta name="description" content="Software engineering, backend APIs, developer tools, and test automation. Explore Dillon Olivi’s projects and software QA engineering experience.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Cormorant+Garamond:wght@500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/spell-hover.css">
-<link rel="stylesheet" href="css/vortex-burst.css">
-<link rel="stylesheet" href="css/explosion-burst.css">
 </head>
-<body>
-<nav class="site-nav">
-  <span class="brand">Dillon Olivi</span>
-  <div class="links">
-    <a href="about.html">About</a>
-    <a href="experience.html">Experience</a>
-  </div>
+<body class="page-swe">
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+<a class="brand" href="index.html">Dillon Olivi<span class="brand-dot" aria-hidden="true">.</span></a>
+<div class="links">
+<a href="software-engineering.html">Projects</a>
+<a href="experience.html">Experience</a>
+<a href="software-engineering.html#skills">Skills</a>
+<a href="game-design.html">Design</a>
+<a href="about.html">About</a>
+</div>
 </nav>
-<section class="hero">
-  <h1><span style="color: #f5efe2;">Dillon Olivi</span><br><span class="hero-sub">Software Engineer · Game Designer · QA</span></h1>
-  <p>Pick a track to explore the work.</p>
+<main id="main" class="page-content" tabindex="-1">
+
+<header class="hero">
+<p class="eyebrow">Software Engineer · Irvine, CA</p>
+<h1>Reliable software.<br><span>From API to release.</span></h1>
+<p class="lead">I build backend applications, developer tools, and automation, with a software QA engineering background in large-scale live-service development.</p>
+<div class="actions"><a class="btn btn-primary" href="software-engineering.html">Explore engineering projects <span aria-hidden="true">↗</span></a><a class="btn" href="experience.html">View experience</a></div>
+<p class="hero-note">Python · JavaScript · Backend / APIs · Test automation · CI/CD</p>
+</header>
+<section class="section" aria-labelledby="selected-projects">
+<div class="section-heading"><div><p class="eyebrow">Selected work</p><h2 id="selected-projects">Engineering projects</h2></div><a class="text-link" href="software-engineering.html">Projects &amp; skills ↗</a></div>
+<div class="project-grid"><article class="project-card engineering-card" id="test-automation">
+<a class="project-media" href="https://dillon-olivi.github.io/release-readiness-demo/" target="_blank" rel="noopener noreferrer"><img src="assets/projects/test-automation-preview.png" alt="Test automation suite interface preview" loading="lazy"></a>
+<div class="project-body"><p class="eyebrow">Automation / CI/CD</p><h3>Test automation suite</h3><p>A QA automation portfolio project combining Selenium browser tests, HTTP-level checks with requests, and pytest in a GitHub Actions workflow.</p><div class="skill-tags"><span>Python</span><span>Pytest</span><span>Selenium</span><span>GitHub Actions</span></div>
+<a class="text-link" href="https://dillon-olivi.github.io/release-readiness-demo/" target="_blank" rel="noopener noreferrer">Explore test automation suite <span aria-hidden="true">↗</span></a></div>
+</article>
+<article class="project-card engineering-card" id="steam-dashboard">
+<a class="project-media" href="https://dillon-olivi.github.io/steam-dashboard/" target="_blank" rel="noopener noreferrer"><img src="assets/projects/steam-dashboard-preview.png" alt="Steam stats dashboard with player lookup and demo profile controls" loading="lazy"></a>
+<div class="project-body"><p class="eyebrow">Backend / API integration</p><h3>Steam stats dashboard</h3><p>A full-stack dashboard integrating the Steam Web API with a FastAPI backend on Render and a static frontend on GitHub Pages.</p><div class="skill-tags"><span>Python</span><span>FastAPI</span><span>REST APIs</span><span>Render</span></div>
+<a class="text-link" href="https://dillon-olivi.github.io/steam-dashboard/" target="_blank" rel="noopener noreferrer">Explore steam stats dashboard <span aria-hidden="true">↗</span></a></div>
+</article></div>
 </section>
-<section class="tracks">
-  <a class="track-card proc-btn swe explosion-trigger" href="software-engineering.html">
-    <div class="eyebrow">Software Engineering</div>
-    <h2>Test automation, dashboards, tooling</h2>
-    <p>SDET and full-stack projects — CI pipelines, API integrations, and QA automation built from real production experience.</p>
-    <div class="tags">
-      <span>Python</span>
-      <span>FastAPI</span>
-      <span>CI/CD</span>
-      <span>REST APIs</span>
-    </div>
-  </a>
-  <a class="track-card proc-btn design vortex-trigger" href="game-design.html">
-    <div class="eyebrow">Game Design</div>
-    <h2>Quest, item, and spell design</h2>
-    <p>Original game projects and design work from Diablo IV and World of Warcraft — systems, progression, and content design.</p>
-    <div class="tags">
-      <span>Unreal Engine</span>
-      <span>Systems Design</span>
-      <span>Class Design</span>
-      <span>Blueprints</span>
-    </div>
-  </a>
-</section>
-<footer class="site-footer">
-  <p class="credit">Burst effects use assets from <a href="https://untiedgames.itch.io" target="_blank" rel="noopener">unTied Games</a>.</p>
-</footer>
-<script src="js/spell-hover.js"></script>
-<script src="js/vortex-burst.js"></script>
-<script src="js/explosion-burst.js"></script>
+<section class="section background-strip" aria-labelledby="background-title"><div><p class="eyebrow">Professional background</p><h2 id="background-title">Release quality at Blizzard Entertainment</h2><p>October 2022 – July 2026 · Irvine, CA</p></div><div><p>Build validation, automation tooling, and release risk analysis across World of Warcraft and Diablo IV.</p><a class="text-link" href="experience.html">Read the experience ↗</a></div></section>
+<section class="section design-feature" aria-labelledby="design-title"><div><p class="eyebrow">A design perspective</p><h2 id="design-title">Systems, content, and player experience</h2><p>Explore the Classic quest design case study and personal Unreal Engine projects.</p><a class="text-link" href="game-design.html">Explore game design ↗</a></div><a class="project-media" href="game-design.html#quest-case-study-title"><img src="assets/projects/dna-of-great-classic-quest-design.webp" alt="The DNA of Great Classic Quest Design cover" width="1400" height="788" loading="lazy"></a></section>
+
+</main>
+<footer class="site-footer"><p>Dillon Olivi · Software Engineering &amp; Automation</p><a href="mailto:dillonjameso13@gmail.com">Get in touch ↗</a></footer>
 </body>
 </html>
