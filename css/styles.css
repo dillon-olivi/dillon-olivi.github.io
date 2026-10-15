@@ -91,6 +91,9 @@ main:focus { outline: none; }
 .highlights li { margin-bottom: .45rem; }
 #lorestone-title + .role-title { margin-bottom: 0; }
 .experience-entry + .experience-entry { margin-top: 1.5rem; }
+.rotation { margin-top: 1.5rem; padding: 1rem 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); }
+.rotation h4 { margin-bottom: .4rem; }
+.rotation p { margin: 0; }
 .experience-area { border-top: 1px solid var(--border); padding-top: 1.75rem; margin-top: 1rem; }
 .experience-area h3 { max-width: 750px; margin-bottom: 1rem; }
 .experience-area ul { color: var(--text-muted); padding-left: 1.25rem; max-width: 860px; font-size: .95rem; }
