@@ -87,6 +87,10 @@ main:focus { outline: none; }
 .experience-header { padding-bottom: 1.5rem; }
 .experience-header h2 { font-size: 1.8rem; }
 .role-title { max-width: 740px; font-size: 1.05rem; margin-bottom: 0; }
+.highlights { max-width: 760px; margin: 1rem 0 0; padding-left: 1.2rem; color: var(--text-muted); }
+.highlights li { margin-bottom: .45rem; }
+#lorestone-title + .role-title { margin-bottom: 0; }
+.experience-entry + .experience-entry { margin-top: 1.5rem; }
 .experience-area { border-top: 1px solid var(--border); padding-top: 1.75rem; margin-top: 1rem; }
 .experience-area h3 { max-width: 750px; margin-bottom: 1rem; }
 .experience-area ul { color: var(--text-muted); padding-left: 1.25rem; max-width: 860px; font-size: .95rem; }
