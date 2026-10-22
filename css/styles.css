@@ -156,3 +156,15 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 .studio-banner { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 1.5rem; }
+
+/* Portfolio overview */
+.page-home .home-hero { max-width: 1000px; padding-block: 1rem .5rem; }
+.page-home .home-hero h1 { max-width: 1000px; }
+.page-home .design-card .eyebrow, .page-home .design-card .text-link { color: var(--accent-design-soft); }
+.collection-links { gap: 1rem 2rem; }
+.home-contact { max-width: 760px; }
+.home-contact .actions { align-items: center; }
+#featured-work, #crypt, #nanite-protocol { scroll-margin-top: 2rem; }
+@media (max-width: 760px) {
+  .site-nav .links { justify-content: flex-start; gap: .25rem 1.25rem; }
+}
