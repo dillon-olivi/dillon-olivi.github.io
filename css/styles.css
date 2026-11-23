@@ -144,7 +144,7 @@ html { scroll-behavior: smooth; }
 .credits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 1.5rem; }
 .team-section { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
 .credit-card { padding: 0; overflow: hidden; margin: 0; }
-.credit-card > img { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; }
+.credit-card > img, .credit-card > a > img { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; }
 .credit-card h4 { font-size: 1.1rem; margin: 0 0 .5rem; }
 .credit-card p { margin: 0; }
 .assignment-feature { display: grid; grid-template-columns: 1fr 1.25fr; gap: 2rem; align-items: start; }
